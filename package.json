@@ -1,0 +1,16 @@
+{
+  "name": "jourley_backend",
+  "version": "1.0.0",
+  "description": "This is backend for jourley app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wonderful",
+  "license": "ISC",
+  "dependencies": {
+  	"express": "~4.13.2",
+  	"mongoose": "~4.1.0",
+  	"body-parser": "~1.13.3"
+  }
+}
