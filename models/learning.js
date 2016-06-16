@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var learningSchema = new Schema({
 	title: String,
-	reads: String
+	reads: Number
 });
 
 module.exports = mongoose.model('Learning', learningSchema);
