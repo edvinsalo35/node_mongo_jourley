@@ -20,7 +20,7 @@ router.route('/learnings')
 
 		learning.title = req.body.title;
 		learning.reads = 0;
-
+		learning.image = 'http://localhost:8080/image/universe.jpg';
 		learning.save(function(err) {
 			if (err)
 				res.send(err);
