@@ -40,11 +40,11 @@ router.route('/learnings/:learning_id')
 		Learning.findById(req.params.learning_id, function(err, learning) {
 			if (err)
 				res.send(err);
-			learning.title = req.body.title;
+			learning.schedule = req.body.learning.schedule;
 			learning.save(function(err) {
 				if (err)
 					res.send(err);
-				res.json({ message: 'Learning successfully updated!' });
+				res.json({ status: 200, message: 'Learning successfully updated!' });
 			});
 		});
 	})
