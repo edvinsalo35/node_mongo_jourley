@@ -18,13 +18,13 @@ router.route('/learnings')
 	.post(function(req, res) {
 		var learning = new Learning();
 
-		message.title = req.body.title;
-		message.reads = 0;
+		learning.title = req.body.title;
+		learning.reads = 0;
 
-		message.save(function(err) {
+		learning.save(function(err) {
 			if (err)
 				res.send(err);
-			res.json({ message: 'Learning created successfully!' });
+			res.json({ status: 200, message: 'Learning created successfully!' });
 		});
 	});
 
@@ -54,7 +54,7 @@ router.route('/learnings/:learning_id')
 		}, function(err, learning) {
 			if (err)
 				res.send(err);
-			res.json({ message: 'Successfully deleted learning!'});
+			res.json({ status: 200, message: 'Successfully deleted learning!'});
 		});
 	});
 
