@@ -19,6 +19,7 @@ router.route('/learnings')
 		var learning = new Learning();
 
 		learning.title = req.body.title;
+		learning.udid = req.body.udid;
 		learning.reads = 0;
 		learning.image = 'http://localhost:8080/image/universe.jpg';
 		learning.save(function(err) {
